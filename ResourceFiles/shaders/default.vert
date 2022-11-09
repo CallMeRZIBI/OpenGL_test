@@ -1,20 +1,24 @@
 #version 460 core
 // Position/Coordinates
 layout (location = 0) in vec3 aPos;
-// Colors
-layout (location = 1) in vec3 aColor;
-// Texture
-layout (location = 2) in vec2 aTex;
 // Normals (not necessarily normalized)
-layout (location = 3) in vec3 aNormal;
+layout (location = 1) in vec3 aNormal;
+// Colors
+layout (location = 2) in vec3 aColor;
+// Texture
+layout (location = 3) in vec2 aTex;
 
+
+// Outputs the current position for the Fragment Shader
+out vec3 crntPos;
+// Outputs the normal for the Fragment Shader
+out vec3 Normal;
 // Outputs the color for the Fragment Shader
 out vec3 color;
 // Outputs the texture coordinates to the Fragment Shader
 out vec2 texCoord;
-// Outputs the normal for the Fragment Shader
-out vec3 Normal;
-out vec3 crntPos;
+
+
 
 // Imports the camera matrix from the main function
 uniform mat4 camMatrix;

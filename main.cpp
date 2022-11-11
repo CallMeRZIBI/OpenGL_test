@@ -52,12 +52,12 @@ int main()
     // Initializing camera object
     Camera camera(width, height, glm::vec3(0.0f, 0.0f, 2.0f));
 
-    Model model("models/sword/scene.gltf");
+    Model model("models/map/scene.gltf");
 
     // Main while loop
     while(!glfwWindowShouldClose(window)){
         // Specify the color of the background
-        glClearColor(0.06f, 0.13f, 0.17f, 1.0f);
+        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
         // Clean the back buffer and depth buffer
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
